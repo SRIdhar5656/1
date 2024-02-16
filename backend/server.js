@@ -11,9 +11,9 @@ app.use((req,res,next) =>{
 })
 app.use(express.json());
 
-// app.get('/',(req,res) =>{
-//     res.send("hello worlld");
-// })
+app.get('/',(req,res) =>{
+   res.send("hello worlld");
+})
 
 mongoose.connect(process.env.MONGO_URL)
 .then(() =>{app.listen(process.env.PORT,() =>{
